@@ -22,7 +22,7 @@
           }
           stuobj[i].avg=stuobj[i].sum/3;
         }
-          document.writeln("<h1>names and marks</h1><br>")
+          document.writeln("<h1>names and marks</h1><br>");
           studobj.sort(function(a,b){return b.sum-a.sum});
 
         for(var k=0;k<stuobj.length;k++)
@@ -43,7 +43,6 @@
         {
             document.writeln(stuobj[k].name+"<br>");
         }
-
           document.writeln("<h1>names and averages</h2><br>");
           stuobj.sort(function(a,b){return b.avg-a.avg;});
           for(var k=0;k<stuobj.length;k++)

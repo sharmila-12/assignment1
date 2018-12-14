@@ -17,9 +17,11 @@
           sum=0;
           for(var j=0;j<3;j++)
           {
-             stuobj[i].sum=sum+stuobj[i].subj[i]
+             stuobj[i].sum=sum+stuobj[i].subj[j];
           }
           stuobj[i].avg=stuobj[i].sum/3;
+          document.writeln("<h1>names and marks</h1><br>")
+          studobj.sort(function(a,b){return b.sum-a.sum});
         }
         for(var k=0;k<stuobj.length;k++)
         {
@@ -37,16 +39,25 @@
         }
         stuobj.sort(function(a,b)
         {
-           if(a.name<b.name)
+           if(a.name < b.name)
              return -1
           else
              return 1
-        }
+        })
+        document.writeln("<h1>names</h1><br>");
          
         for(var k=0;k<stuobj.length;k++)
         {
-          document.writeln(stuobj[k].name+" "+stuobj[k].avg+" "+stuobj[k].sum);
+            document.writeln(stuobj[k].name+"<br>");
         }
+
+          document.writeln("<h1>names and averages</h2><br>")
+          stuobj.sort(function(a,b){return b.avg-a.avg;});
+          for(var k=0;k<stuobj.length;k++)
+          {
+          document.writeln(stuobj[k].name+" "+stuobj[k].avg+" "+stuobj[k].sum+"<br>");
+          }
+        
     </script>
   </head>
   </body>
